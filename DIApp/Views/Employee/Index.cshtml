@@ -1,0 +1,23 @@
+﻿@model IEnumerable<DIApp.Models.Employee>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Employee Record</h1>
+<a asp-action="AddEmployee" asp-controller="Employee">Add Employee</a>
+<table class="table table-bordered">
+    <tr>
+        <th>Id</th>
+        <th>Fname</th>
+        <th>Lname</th>
+    </tr>
+    @foreach(var emp in Model)
+            {
+                <tr>
+                    <td>@emp.Id</td>
+                    <td>@emp.Fname</td>
+                    <td>@emp.Lname</td>
+                </tr>
+            }
+</table>
+
